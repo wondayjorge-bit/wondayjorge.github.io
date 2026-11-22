@@ -1,0 +1,1646 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quinta de Ventozelo — Douro, Portugal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            olive: {
+              900: '#2d361d',
+              800: '#3f4a28',
+              700: '#556337',
+              600: '#6b7b46',
+              100: '#eef1e6',
+              50: '#f7f8f3',
+            },
+            wine: {
+              900: '#4a121d',
+              800: '#641827',
+              700: '#7d2033',
+              100: '#f7eaed',
+            },
+            mustard: {
+              600: '#b88618',
+              500: '#d49f24',
+              400: '#e5b948',
+              100: '#fdf7e6',
+            },
+            cream: '#e8e4d8',
+            parchment: '#f3efe4',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '"Noto Sans SC"', '"Noto Sans JP"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- CSS Styles -->
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans SC', 'Noto Sans JP', sans-serif;
+      background-color: #e8e4d8;
+      background-image: radial-gradient(circle at top, rgba(85, 99, 55, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(74, 18, 29, 0.11), transparent 50%);
+      color: #1f2317;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      text-shadow: 0 1px 2px rgba(20, 23, 14, 0.14);
+    }
+
+    .text-depth {
+      text-shadow: 0 1px 1px rgba(20, 23, 14, 0.12);
+    }
+
+    .hero-title-depth {
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65), 0 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-blur-bg {
+      background-image: url('https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px);
+      transform: scale(1.08);
+    }
+
+    .hero-card-btn {
+      transition: all 0.24s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card-active {
+      background-color: #556337;
+      color: #ffffff;
+      border: 1.5px solid #e5b948;
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .hero-card-inactive {
+      background-color: rgba(34, 38, 26, 0.62);
+      color: #f7f8f3;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .hero-card-inactive:hover {
+      background-color: rgba(74, 18, 29, 0.72);
+      border-color: #e5b948;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .view-animate {
+      animation: fadeSlideIn 0.32s ease forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-cream text-[#1f2317]">
+  <!-- Hero Banner with Blurred Scenery, Language Dropdown, Quinta de Ventozelo Title & 3 Section Cards -->
+  <section class="relative w-full min-h-[21rem] sm:min-h-[22.5rem] overflow-hidden border-b-4 border-mustard-500/75 flex flex-col justify-between">
+    <div
+      class="hero-blur-bg absolute inset-0"
+      role="img"
+      aria-label="Quinta de Ventozelo Douro terraces"
+    ></div>
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(180deg, rgba(45, 54, 29, 0.62) 0%, rgba(45, 54, 29, 0.56) 48%, rgba(74, 18, 29, 0.78) 100%);"
+    ></div>
+
+    <!-- Top Row inside Hero: Location Tag + Language Dropdown Selector -->
+    <div class="relative z-20 max-w-5xl w-full mx-auto px-4 pt-4 flex items-center justify-between gap-2">
+      <span class="px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.2em] bg-black/35 text-mustard-100 border border-mustard-400/40">
+        Douro · Portugal
+      </span>
+
+      <div class="relative">
+        <label for="langSelect" class="sr-only">Language</label>
+        <select
+          id="langSelect"
+          aria-label="Language selector"
+          class="appearance-none bg-black/55 hover:bg-black/70 text-white text-xs sm:text-sm font-semibold pl-3.5 pr-8 py-1.5 rounded-full border border-white/30 focus:outline-none focus:border-mustard-400 cursor-pointer transition"
+        >
+          <option value="pt" class="bg-olive-900 text-white">Português</option>
+          <option value="en" class="bg-olive-900 text-white">English</option>
+          <option value="zh" class="bg-olive-900 text-white">中文 (Mandarin)</option>
+          <option value="ja" class="bg-olive-900 text-white">日本語</option>
+          <option value="es" class="bg-olive-900 text-white">Español</option>
+          <option value="fr" class="bg-olive-900 text-white">Français</option>
+        </select>
+        <span class="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-mustard-400 text-xs">▾</span>
+      </div>
+    </div>
+
+    <!-- Center Title & Subtitle -->
+    <div class="relative z-10 max-w-4xl w-full mx-auto px-4 py-3 text-center">
+      <h1 class="hero-title-depth font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide">
+        Quinta de Ventozelo
+      </h1>
+      <p id="heroSubtitle" class="text-depth mt-1.5 text-sm sm:text-base italic text-olive-100 max-w-xl mx-auto font-light"></p>
+    </div>
+
+    <!-- Three Interface Cards inside Hero: ( carta ) ( qual é o teu vinho ) ( história ) -->
+    <nav
+      aria-label="Main sections"
+      class="relative z-20 max-w-3xl w-full mx-auto px-4 pb-5 pt-1"
+    >
+      <div class="grid grid-cols-3 gap-2.5 sm:gap-4">
+        <button
+          id="tab-carta"
+          data-tab="carta"
+          class="hero-card-btn px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-semibold text-xs sm:text-sm md:text-base flex items-center justify-center text-center cursor-pointer"
+        >
+          <span id="label-tab-carta"></span>
+        </button>
+
+        <button
+          id="tab-quiz"
+          data-tab="quiz"
+          class="hero-card-btn px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-semibold text-xs sm:text-sm md:text-base flex items-center justify-center text-center cursor-pointer"
+        >
+          <span id="label-tab-quiz"></span>
+        </button>
+
+        <button
+          id="tab-historia"
+          data-tab="historia"
+          class="hero-card-btn px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-semibold text-xs sm:text-sm md:text-base flex items-center justify-center text-center cursor-pointer"
+        >
+          <span id="label-tab-historia"></span>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Dynamic Tab Container (Only active tab is rendered) -->
+  <main id="appContainer" class="flex-1 max-w-5xl w-full mx-auto px-4 py-8"></main>
+
+  <!-- Footer -->
+  <footer class="bg-olive-900 text-olive-100 py-5 px-4 text-center text-xs border-t border-mustard-500/30">
+    <p class="font-display text-base text-mustard-400">Quinta de Ventozelo</p>
+    <p id="footerCopy" class="mt-0.5 text-olive-100/80"></p>
+  </footer>
+
+  <!-- JavaScript Application Logic -->
+  <script>
+    const WINE_CATALOG = [
+      {
+        id: 'reserva-tinto-2023',
+        exactName: 'RESERVA TINTO 2023',
+        style: 'tinto',
+        mouthfeel: 'velvety',
+        aroma: 'red_fruit_floral',
+        foodKey: 'redMeatCheeseMed',
+        desc: {
+          pt: 'Este Reserva apresenta cor granada intensa, e perfil aromático frutado, sobressaindo a fruta vermelha madura, envolta em notas delicadas florais. Em prova demonstra taninos macios, equilibrados com uma acidez atraente, revelando um final longo e elegante. Combinação perfeita com grande variedade de queijos, carnes e cozinha mediterrânea.',
+          en: 'This Reserva displays an intense garnet colour and a fruity aromatic profile with ripe red fruit standing out, wrapped in delicate floral notes. On the palate it shows soft tannins balanced with attractive acidity, revealing a long and elegant finish. Perfect pairing with a wide variety of cheeses, meats, and Mediterranean cuisine.',
+          zh: '这款珍藏红葡萄酒呈深石榴红色，果香浓郁，以成熟红果为主，并交织细腻花香。口感单宁柔顺，酸度宜人，余味悠长优雅，非常适合搭配各类奶酪、肉类和地中海菜肴。',
+          ja: '深いガーネット色で、熟した赤い果実を中心に繊細な花の香りが寄り添う果実味豊かなアロマが特徴です。口当たりは柔らかく、心地よい酸味と調和し、長くエレガントな余韻を残します。チーズや肉料理、地中海料理と好相性です。',
+          es: 'Este Reserva presenta un color granate intenso y un perfil aromático afrutado, destacando la fruta roja madura envuelta en delicadas notas florales. En boca muestra taninos suaves, equilibrados con una acidez atractiva y un final largo y elegante. Combinación perfecta con quesos, carnes y cocina mediterránea.',
+          fr: 'Cette Réserve présente une robe grenat intense et un profil aromatique fruité dominé par les fruits rouges mûrs et de délicates notes florales. En bouche, les tanins souples et l’acidité harmonieuse mènent à une finale longue et élégante. Idéale avec fromages, viandes et cuisine méditerranéenne.'
+        }
+      },
+      {
+        id: 'rose-de-ventozelo',
+        exactName: 'ROSE DE VENTOZELO',
+        style: 'rose',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'red_fruit_floral',
+        foodKey: 'lightFishWhiteMeat',
+        desc: {
+          pt: 'De cor suave, tonalidade rosa-pálido. Demonstra um aroma intenso a frutos vermelhos maduros, sobressaindo as framboesas, acompanhados por discretas notas vegetais. Na boca revela acidez vibrante, elegantemente equilibrada com o volume de boca, tornando-o um rosé muito cativante. Pode ser servido como aperitivo ou a acompanhar pratos leves de peixe e carnes brancas.',
+          en: 'Soft pale-pink hue with an intense aroma of ripe red fruits, especially raspberries, alongside discreet herbal notes. Vibrant acidity elegantly balanced with mouth volume makes it a captivating rosé. Ideal as an aperitif or with light fish and white meat dishes.',
+          zh: '柔和浅粉色酒泽，散发浓郁成熟的红果香气，尤以覆盆子突出，并伴有含蓄的植物清香。口感酸度活泼，酒体饱满平衡，清新迷人。适合作为开胃酒或搭配清淡鱼类与白肉菜肴。',
+          ja: '淡いピンク色で、ラズベリーを中心とした熟した赤い果実の豊かな香りに、穏やかなハーバル感が重なります。生き生きとした酸味と口当たりのボリュームが調和した魅力的なロゼです。食前酒や軽い魚介・白身肉料理に最適です。',
+          es: 'De color suave, tonalidad rosa pálido. Aroma intenso a frutos rojos maduros, destacando las frambuesas, con discretas notas vegetales. En boca muestra acidez vibrante equilibrada con el volumen. Ideal como aperitivo o con platos ligeros de pescado y carnes blancas.',
+          fr: 'Robe rose pâle délicate au nez intense de fruits rouges mûrs, notamment la framboise, avec de discrètes notes végétales. En bouche, l’acidité vive et le volume s’équilibrent élégamment. Parfait à l’apéritif ou avec des poissons légers et viandes blanches.'
+        }
+      },
+      {
+        id: 'essencia-tinto-2016',
+        exactName: 'ESSENCIA TINTO 2016',
+        style: 'tinto',
+        mouthfeel: 'structured_spicy',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'gameHeartyMeatSpice',
+        desc: {
+          pt: 'Vinho ainda pouco evoluído na cor, com predomínio de aromas intensos de fruta preta madura e especiarias, destacando-se a pimenta preta. Revela-se vibrante na boca, de taninos redondos e macios, com a fruta e toque especiado a reapareceram, assim como ligeiro tostado. Vinho gastronómico que combina especialmente bem com pratos de carne, caça ou condimentados.',
+          en: 'Youthful colour with intense aromas of ripe black fruit and spices, especially black pepper. Vibrant on the palate with round, soft tannins, returning fruit and spice notes, and a subtle toasted touch. Gastronomic wine pairing especially well with meat, game, or spiced dishes.',
+          zh: '酒色年轻，以浓郁成熟黑果与香料香气为主，黑胡椒尤为突出。口感充满活力，单宁圆润柔顺，果香与辛香再次浮现并带轻微烘烤感。极具美食搭配力的酒款，尤其适合肉类、野味或重调味菜肴。',
+          ja: '色調はまだ若々しく、熟した黒系果実とスパイス（特に黒胡椒）の力強い香りが際立ちます。口中は生き生きとし、丸みのある滑らかなタンニンに果実味やスパイシーさ、ほのかなトースト香が重なります。肉料理やジビエ、スパイスを使った料理に最適です。',
+          es: 'Color aún poco evolucionado, con predominio de aromas intensos de fruta negra madura y especias, destacando la pimienta negra. Vibrante en boca, de taninos redondos y suaves, con notas frutales, especiadas y ligero tostado. Ideal con carnes, caza o platos condimentados.',
+          fr: 'Robe encore jeune aux arômes intenses de fruits noirs mûrs et d’épices, dominés par le poivre noir. Bouche vibrante aux tanins ronds et souples, rappelant les fruits, les épices et un léger toasté. Idéal avec viandes, gibier ou plats relevés.'
+        }
+      },
+      {
+        id: 'malvasia-fina-2023',
+        exactName: 'MALVASIA FINA 2023',
+        style: 'branco',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'vegetarianSaladLightFish',
+        desc: {
+          pt: 'De aparência cristalina e cor ténue, esta monocasta surge com perfil fresco, destacando-se as notas de fruta tropical e citrinos. Em prova, revela-se mais contido e discreto do que no aroma, sobressaindo a frescura e a firmeza. Ideal como aperitivo, a acompanhar pratos leves de peixe ou carnes brancas, e combina com pratos vegetarianos como saladas ou gratinados de legumes.',
+          en: 'Crystal-clear appearance and pale hue, this single-varietal shows a fresh profile highlighting tropical fruit and citrus notes. On tasting, freshness and firmness stand out cleanly. Ideal as an aperitif, with light fish or white meats, and pairs with vegetarian dishes like salads or vegetable gratins.',
+          zh: '外观清澈、色泽浅淡，这款单一品种白葡萄酒清新爽口，热带水果与柑橘香气突出。入口清新而有支撑力。适合作为开胃酒、搭配清淡鱼类或白肉，也可配沙拉或蔬菜焗烤等素食。',
+          ja: '澄んだ淡い色合いで、トロピカルフルーツや柑橘の香りが映えるフレッシュな単一品種白ワインです。味わいは爽やかさと芯のある引き締まった印象。食前酒や軽い魚介・白身肉、サラダや野菜のグラタンなどのベジタリアン料理に合います。',
+          es: 'De aspecto cristalino y color tenue, perfil fresco con notas de fruta tropical y cítricos. En boca sobresalen la frescura y la firmeza. Ideal como aperitivo, pescados ligeros o carnes blancas, y combina con platos vegetarianos como ensaladas o gratinados de verduras.',
+          fr: 'Robe cristalline pâle au profil frais mêlant fruits tropicaux et agrumes. En bouche, fraîcheur et fermeté s’affirment nettement. Idéal à l’apéritif, avec poissons légers ou viandes blanches, ainsi qu’avec des plats végétariens comme salades ou gratins de légumes.'
+        }
+      },
+      {
+        id: 'traditional-blend-2024',
+        exactName: 'TRADITIONAL BLEND 2024',
+        style: 'tinto',
+        mouthfeel: 'structured_spicy',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'redMeatCheeseMed',
+        desc: {
+          pt: 'De cor rubi azulada, no nariz sobressaem notas de fruta preta envolvidas por nuances florais. Na boca a fruta mantém-se bem presente, revelando boa estrutura e acidez viva que lhe transmite expressão e elegância. O final é longo e persistente com uma agradável sensação de frescura. Pode ser apreciado a solo ou a acompanhar queijos, carnes e cozinha mediterrânea.',
+          en: 'Bluish-ruby colour with black fruit notes wrapped in floral nuances on the nose. On the palate the fruit stays prominent with good structure and lively acidity for expression and elegance, finishing long and fresh. Enjoyable on its own or with cheeses, meats, and Mediterranean cuisine.',
+          zh: '呈蓝宝石红色，香气以黑果为主并伴随花香。入口果味饱满，结构良好，酸度明快，兼具表现力与优雅感，余味悠长清新。可单饮或搭配奶酪、肉类与地中海料理。',
+          ja: '青みを帯びたルビー色で、黒系果実の香りにフローラルなニュアンスが溶け込みます。口中でも果実味がしっかり続き、骨格と生き生きとした酸がエレガンスをもたらし、爽やかな長い余韻へ続きます。単体でもチーズや肉、地中海料理とも楽しめます。',
+          es: 'Color rubí azulado, con notas de fruta negra envueltas en matices florales. En boca la fruta está bien presente con buena estructura, acidez viva y final largo y fresco. Ideal solo o con quesos, carnes y cocina mediterránea.',
+          fr: 'Robe rubis aux reflets bleutés, nez de fruits noirs souligné de nuances florales. En bouche, le fruit reste présent avec une belle structure, une acidité vive et une finale longue et fraîche. À déguster seul ou avec fromages, viandes et cuisine méditerranéenne.'
+        }
+      },
+      {
+        id: 'tinta-barroca-2020',
+        exactName: 'TINTA BARROCA 2020',
+        style: 'tinto',
+        mouthfeel: 'velvety',
+        aroma: 'red_fruit_floral',
+        foodKey: 'comfortGrillWhiteMeat',
+        desc: {
+          pt: 'De cor rubi intensa, o aroma é rico, dominado por notas a fruta vermelha fresca, com ligeiro toque floral, complexado pelos aromas de estágio em garrafa. Em prova sobressai o volume de boca, com taninos evidentes, mas macios, compondo um final de boca com acidez equilibrada. Combina com queijos de intensidade média, carnes brancas grelhadas ou comida de conforto.',
+          en: 'Deep ruby colour with a rich aroma led by fresh red fruit, a light floral touch, and bottle-ageing complexity. Shows mouth volume with evident yet soft tannins and a balanced acidic finish. Pairs with medium-intensity cheeses, grilled white meats, comfort food, or simple vegetarian dishes.',
+          zh: '深邃宝石红，香气丰郁，以新鲜红果为主，带微弱花香及瓶陈复杂感。口感饱满，单宁明显但柔和，酸度平衡。适合搭配中等浓度的奶酪、烤白肉、家常暖心菜或简朴素食。',
+          ja: '濃いルビー色で、新鮮な赤い果実を中心にほのかな花香と瓶熟成の複雑さが重なります。口当たりにボリュームがあり、しっかりしつつも柔らかなタンニンとバランスの良い酸が続きます。中程度のチーズやグリルした白身肉、家庭料理に合います。',
+          es: 'Color rubí intenso, aroma rico dominado por fruta roja fresca, ligero toque floral y matices de botella. Destaca su volumen en boca, taninos suaves y acidez equilibrada. Combina con quesos medios, carnes blancas a la brasa o cocina reconfortante.',
+          fr: 'Robe rubis intense au nez riche de fruits rouges frais, légère note florale et complexité d’élevage en bouteille. Bouche volumineuse aux tanins présents mais souples et finale équilibrée. Parfait avec fromages doux à moyens, viandes blanches grillées ou cuisine réconfortante.'
+        }
+      },
+      {
+        id: 'tinto-cao-2022',
+        exactName: 'TINTO CÃO 2022',
+        style: 'tinto',
+        mouthfeel: 'velvety',
+        aroma: 'red_fruit_floral',
+        foodKey: 'comfortGrillWhiteMeat',
+        desc: {
+          pt: 'Vinho de cor rubi aberta, com aroma fresco a fruta, com notas florais. Na boca ressurge a frescura sentida no nariz, rodeada por taninos sedosos, terminado com grande elegância e equilíbrio. Combina na perfeição com pratos leves de carnes brancas ou grelhadas, comida de conforto ou pratos vegetarianos simples.',
+          en: 'Bright ruby wine with fresh fruit aromas and floral notes. The nose’s freshness returns on the palate surrounded by silky tannins, finishing with great elegance and balance. Pairs seamlessly with light or grilled white meats, comfort food, or simple vegetarian dishes.',
+          zh: '明亮宝石红色，散发新鲜果香与花香。入口延续鼻尖的清新感，单宁如丝绸般顺滑，收尾优雅均衡。非常适合搭配清淡或烧烤白肉、家常菜及简单素食。',
+          ja: '明るいルビー色で、フレッシュな果実香とフローラルなノートが広がります。香り通りの爽やかさが口中でも続き、シルキーなタンニンに包まれて上品でバランスの取れた余韻へ。軽い白身肉やグリル、家庭料理に好相性です。',
+          es: 'Color rubí abierto, aroma fresco a fruta con notas florales. En boca vuelve la frescura con taninos sedosos y final elegante y equilibrado. Combina perfectamente con carnes blancas ligeras o a la brasa, comida de confort o platos vegetarianos sencillos.',
+          fr: 'Robe rubis clair au nez frais de fruits et de notes florales. En bouche, la fraîcheur se prolonge avec des tanins soyeux et une finale élégante et équilibrée. Idéal avec viandes blanches légères ou grillées, cuisine réconfortante ou plats végétariens simples.'
+        }
+      },
+      {
+        id: 'dalva-espumante-bruto-rose-2024',
+        exactName: 'Dalva Espumante Bruto Rosé 2024',
+        style: 'espumante',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'red_fruit_floral',
+        foodKey: 'seafoodAperitifLightMeat',
+        desc: {
+          pt: 'Apresenta tonalidade rosa-pálido, bolha fina e mousse delicada. Revela no aroma notas a frutos vermelhos, surgindo em segundo plano aromas florais e vegetais frescos. Na boca surge com acidez vibrante e com boa presença de boca. Um vinho versátil e fresco para servir como aperitivo, ou a acompanhar pratos leves de carnes brancas, peixes e mariscos.',
+          en: 'Pale-pink shade with fine bubbles and delicate mousse. Aromas of red fruits lead with floral and fresh herbal notes behind. Lively acidity and good palate presence make it a versatile, fresh sparkling wine for aperitifs, light white meats, fish, and seafood.',
+          zh: '浅粉色酒泽，气泡细腻，泡沫柔和。香气以红果为主，随后浮现花香与清新草本香。口感酸度活泼，酒体有质感。是一款百搭清新的起泡酒，适合开胃或搭配清淡白肉、鱼类和海鲜。',
+          ja: '淡いピンク色で、きめ細かい泡と繊細なムースが魅力です。赤い果実の香りに、花やフレッシュなハーブの香りが続きます。生き生きとした酸と心地よい口当たりがあり、食前酒や軽い白身肉、魚介料理に幅広く合います。',
+          es: 'Tonalidad rosa pálido, burbuja fina y mousse delicada. Aroma a frutos rojos con notas florales y vegetales frescos. En boca muestra acidez vibrante y buena presencia. Versátil y fresco como aperitivo o con carnes blancas ligeras, pescados y mariscos.',
+          fr: 'Teinte rose pâle à bulles fines et mousse délicate. Nez de fruits rouges suivi de notes florales et végétales fraîches. Bouche vive et présente. Vin effervescent frais et polyvalent pour l’apéritif, viandes blanches légères, poissons et fruits de mer.'
+        }
+      },
+      {
+        id: 'dalva-moscatel-do-douro',
+        exactName: 'DALVA MOSCATEL DO DOURO',
+        style: 'doce_fortificado',
+        mouthfeel: 'rich_sweet_unctuous',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'dessertsAperitif',
+        desc: {
+          pt: 'Um Moscatel elegante e intenso. Apresenta cor dourada, no aroma, notas de alfazema, compota de uvas e especiarias. O final é cítrico, mentolado e surpreendentemente persistente. Vinho fresco, ideal como aperitivo ou a acompanhar sobremesas.',
+          en: 'An elegant and intense Moscatel with a golden hue and aromas of lavender, grape compote, and spices. The finish is citrusy, mint-tinged, and remarkably persistent. Fresh and ideal as an aperitif or alongside desserts.',
+          zh: '优雅浓郁的麝香强化酒，呈金黄色，带有薰衣草、葡萄果酱与香料香气。收尾带有柑橘、薄荷感，余味悠长。清新宜人，适合开胃或搭配甜点。',
+          ja: '黄金色で、ラベンダーやブドウのコンポート、スパイスの香りが広がるエレガントで濃厚なモスカテルです。後味は柑橘とミントのニュアンスがあり、驚くほど長く続きます。食前酒やデザートに最適です。',
+          es: 'Un Moscatel elegante e intenso de color dorado, con aromas de lavanda, compota de uva y especias. Final cítrico, mentolado y muy persistente. Fresco, ideal como aperitivo o para acompañar postres.',
+          fr: 'Un Moscatel élégant et intense à la robe dorée, aux arômes de lavande, compote de raisin et épices. Finale citronnée, légèrement mentholée et très persistante. Frais, idéal à l’apéritif ou avec des desserts.'
+        }
+      },
+      {
+        id: 'gouveio-2024',
+        exactName: 'GOUVEIO 2024',
+        style: 'branco',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'seafoodAperitifLightMeat',
+        desc: {
+          pt: 'Aspeto brilhante, amarelo leve, com ligeiros reflexos esverdeados. Revela aromas cítricos frescos e subtilezas perfumadas a flor de laranjeira. No primeiro ataque de boca surge amplo e de acidez limpa, evoluíndo em prova para um vinho expressivo e equilibrado. Acompanha na perfeição pratos leves de carne branca, peixe grelhado e marisco.',
+          en: 'Bright pale-yellow appearance with slight greenish reflections. Fresh citrus aromas and subtle orange-blossom perfume lead into a broad palate with clean acidity, evolving into an expressive, balanced wine. Pairs seamlessly with light white meat, grilled fish, and seafood.',
+          zh: '明亮浅黄色带微绿光泽，新鲜柑橘香气与隐约橙花芬芳交织。入口宽阔、酸度干净，表现力强且平衡。非常适合搭配清淡白肉、烤鱼和海鲜。',
+          ja: '緑がかった淡いイエローで、フレッシュな柑橘とほのかなオレンジフラワーの香りが広がります。口当たりは広がりがあり、クリーンな酸味とともに表現力豊かでバランス良く仕上がっています。軽い白身肉やグリルした魚、魚介類にぴったりです。',
+          es: 'Aspecto brillante, amarillo suave con reflejos verdosos. Aromas cítricos frescos y sutiles notas de flor de azahar. En boca es amplio, de acidez limpia y equilibrada. Acompaña muy bien carnes blancas ligeras, pescado a la brasa y marisco.',
+          fr: 'Robe jaune pâle brillante aux reflets verts. Arômes d’agrumes frais et subtiles notes de fleur d’oranger. Bouche ample à l’acidité nette et équilibrée. Idéal avec viandes blanches légères, poissons grillés et fruits de mer.'
+        }
+      },
+      {
+        id: 'essencia-branco-2019',
+        exactName: 'ESSÊNCIA BRANCO 2019',
+        style: 'branco',
+        mouthfeel: 'rich_sweet_unctuous',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'richWhiteFishRisottoCheese',
+        desc: {
+          pt: 'Um vinho que se destaca pela sua amplitude aromática e complexidade. No nariz, revela sinais do estágio em madeira e em garrafa, combinando toques fumados, nuances especiadas e mel, com notas frescas a casca de citrinos em segundo plano. No paladar, apresenta textura aveludada e elegante, com final persistente. Acompanha queijos maturados, foie gras, peixes gordos, carnes de intensidade média e risoto de cogumelos e trufas.',
+          en: 'Standout aromatic breadth and complexity with oak and bottle-ageing notes of smoke, spice, and honey, plus subtle fresh citrus peel. Velvety, elegant palate with a lingering finish. Pairs with aged cheeses, foie gras, oily fish, medium-intensity meats, and mushroom or truffle risotto.',
+          zh: '香气舒展复杂，兼具木桶与瓶陈带来的烟熏、香料与蜂蜜气息，底蕴透出清新柑橘皮香。口感如天鹅绒般顺滑优雅，余味持久。适合搭配陈年奶酪、鹅肝、油脂丰厚的鱼类、中等浓度肉类及蘑菇松露烩饭。',
+          ja: '樽熟成と瓶熟成によるスモーキーさやスパイス、蜂蜜の香りに、爽やかな柑橘ピールが重なる豊かな複雑さが魅力です。ベルベットのように滑らかで上品な口当たりと長い余韻を持ち、熟成チーズやフォアグラ、脂の乗った魚、茸やトリュフのリゾットと好相性です。',
+          es: 'Destaca por su amplitud aromática y complejidad, con notas ahumadas, especiadas y de miel de su paso por madera y botella, y cítricos frescos al fondo. Textura aterciopelada y elegante. Ideal con quesos curados, foie gras, pescados grasos o risotto de setas y trufa.',
+          fr: 'Grande ampleur aromatique mêlant fumé, épices et miel issus de l’élevage, avec une touche d’agrumes frais en arrière-plan. Bouche veloutée et élégante à finale persistante. Parfait avec fromages affinés, foie gras, poissons riches ou risotto aux champignons et truffes.'
+        }
+      },
+      {
+        id: 'tinta-roriz-2021',
+        exactName: 'TINTA RORIZ 2021',
+        style: 'tinto',
+        mouthfeel: 'velvety',
+        aroma: 'red_fruit_floral',
+        foodKey: 'redMeatCheeseMed',
+        desc: {
+          pt: 'Apresenta cor rubi, destacando-se no aroma a fruta vermelha madura, particularmente groselhas e morangos. De forma discreta, surgem nuances especiadas em segundo plano. Sedoso em prova, com frescura e estrutura elegantemente equilibradas. Termina frutado, macio e persistente. Harmoniza bem com queijos intensos, peixes gordos assados, carnes vermelhas e caça.',
+          en: 'Ruby colour highlighting ripe red fruit aromas, especially redcurrants and strawberries, with discreet spicy notes behind. Silky on the palate with balanced freshness and structure, finishing fruity, soft, and persistent. Pairs well with strong cheeses, roasted oily fish, red meats, and game.',
+          zh: '宝石红色泽，香气以成熟红果为主，红醋栗与草莓突出，隐约带香料气息。口感丝滑，清新度与结构优雅平衡，收尾果香浓郁、柔和悠长。适合搭配重味奶酪、烤肥美鱼类、红肉及野味。',
+          ja: 'ルビー色で、レッドカラントやイチゴなどの熟した赤い果実の香りに、控えめなスパイスが寄り添います。シルキーな口当たりと上品なバランスを備え、フルーティーで柔らかな余韻が続きます。濃厚なチーズや焼き魚、赤身肉、ジビエに合います。',
+          es: 'Color rubí, destacando en aroma la fruta roja madura, en especial grosellas y fresas, con discretos matices especiados. Sedoso en boca, equilibrado, frutado y persistente. Armoniza con quesos intensos, pescados grasos asados, carnes rojas y caza.',
+          fr: 'Robe rubis aux arômes de fruits rouges mûrs, notamment groseilles et fraises, relevés de discrètes notes épicées. Bouche soyeuse à l’équilibre frais et élégant, finale fruitée et persistante. Idéal avec fromages corsés, poissons rôtis, viandes rouges et gibier.'
+        }
+      },
+      {
+        id: 'dalva-douro-late-harvest-2015',
+        exactName: 'DALVA DOURO LATE HARVEST 2015',
+        style: 'doce_fortificado',
+        mouthfeel: 'rich_sweet_unctuous',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'dessertsAperitif',
+        desc: {
+          pt: 'Apresenta brilhante cor palha dourada. No nariz sobressai o aroma intenso a compota de citrinos, associado a frutas de caroço, como damasco, e leve toque a especiarias. Em prova apresenta uma elevada concentração de frutas, elegantemente combinada com expressiva acidez e doçura, revelando um final rico e longo. Acompanha entradas como foie gras, queijos cremosos, frutos secos, sobremesas de amêndoa ou tarte de limão.',
+          en: 'Bright golden-straw colour with intense aromas of citrus compote, stone fruit like apricot, and a light spicy touch. Concentrated fruit meets lively acidity and sweetness on the palate for a rich, long finish. Pairs with foie gras, creamy cheeses, nuts, almond desserts, or lemon tart.',
+          zh: '明亮金稻草色，浓郁柑橘果酱香气交织杏等核果及轻微香料感。入口果味高度浓缩，酸度与甜度优雅平衡，余味丰厚悠长。适合搭配鹅肝、奶油奶酪、坚果、杏仁甜点或柠檬挞。',
+          ja: '輝くゴールデンストロー色で、柑橘のコンポートやアプリコットなどの核果、ほのかなスパイスの香りが際立ちます。凝縮した果実味に豊かな酸と甘みが調和し、長くリッチな余韻へ。フォアグラやクリーミーなチーズ、ナッツ、アーモンド菓子、レモンタルトに合います。',
+          es: 'Brillante color paja dorada. Aroma intenso a compota de cítricos, fruta de hueso como albaricoque y ligero toque especiado. Concentración frutal con acidez y dulzor equilibrados y final largo. Ideal con foie gras, quesos cremosos, frutos secos, postres de almendra o tarta de limón.',
+          fr: 'Robe paille dorée brillante au nez intense de compote d’agrumes, abricot et légère pointe épicée. Concentration fruitée mêlant acidité vive et douceur pour une finale riche et longue. Parfait avec foie gras, fromages crémeux, fruits secs, desserts aux amandes ou tarte au citron.'
+        }
+      },
+      {
+        id: 'vintage-port-2015',
+        exactName: 'VINTAGE PORT 2015',
+        style: 'doce_fortificado',
+        mouthfeel: 'structured_spicy',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'gameHeartyMeatSpice',
+        desc: {
+          pt: 'Vinho retinto na cor, com tons violáceos vivos. No nariz apresenta aromas florais e de fruta madura muito intensos, como cassis e groselha, podendo ainda perceber-se notas mentoladas subtis. A prova, apesar dos taninos firmes, apresenta-se com um final equilibrado, fresco e prolongado, com uma excelente acidez que lhe confere uma enorme frescura.',
+          en: 'Deep dark-red hue with vivid violet highlights. Very intense floral and ripe dark-fruit aromas like blackcurrant and redcurrant, with subtle minty notes. Firm tannins are balanced by vibrant acidity for a fresh, long finish with strong ageing potential.',
+          zh: '深邃紫红酒泽，散发极度浓郁的花香与黑加仑、红醋栗等成熟果香，并带细微薄荷感。单宁坚实但酸度鲜活，收尾清新悠长，具备出色的陈年潜力。',
+          ja: '鮮やかなバイオレットを帯びた深い赤色。カシスや赤スグリなどの熟した果実と花の非常に力強い香りに、ほのかなミント感が重なります。しっかりしたタンニンと生き生きとした酸が調和し、フレッシュで長い余韻と高い熟成ポテンシャルを備えています。',
+          es: 'Color tinto profundo con vivos tonos violáceos. Aromas florales y de fruta madura muy intensos, como casis y grosella, con sutiles notas mentoladas. Taninos firmes y acidez equilibrada para un final fresco y prolongado.',
+          fr: 'Robe rouge profond aux reflets violets vifs. Arômes floraux et de fruits mûrs très intenses (cassis, groseille) avec de subtiles notes mentholées. Tanins fermes et belle fraîcheur en finale, avec un grand potentiel de garde.'
+        }
+      },
+      {
+        id: 'loci-2021',
+        exactName: 'LOCI 2021',
+        style: 'tinto',
+        mouthfeel: 'structured_spicy',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'gameHeartyMeatSpice',
+        desc: {
+          pt: 'Este vinho demonstra uma cor rubi e um perfil aromático marcado pela elegância, com aromas intensos a frutos silvestres e cerejas. De forma mais subtil, surge no nariz o carácter vegetal e especiado da Tinta Amarela. Na boca revela-se volumoso, mas delicado, com taninos envolventes e firmes. Termina frutado, longo e com frescura surpreendente. Harmoniza com cozinha tradicional portuguesa, pratos condimentados e caça.',
+          en: 'Ruby colour and an elegant aromatic profile of intense wild berries and cherries, with subtle herbal and spicy notes from Tinta Amarela. Voluminous yet delicate on the palate with enveloping, firm tannins and a long, fresh fruity finish. Pairs with traditional Portuguese dishes, spiced food, and game.',
+          zh: '宝石红色泽，香气优雅，以浓郁野生莓果与樱桃为主，隐约带Tinta Amarela品种特有的草本与香料感。入口饱满而细腻，单宁紧实包裹感强，余味果香悠长且清新。适合搭配传统葡式菜肴、调味浓郁菜品与野味。',
+          ja: 'ルビー色で、野生のベリーやチェリーの力強く上品なアロマに、ティンタ・アマレラ由来のハーバルでスパイシーなニュアンスが寄り添います。ボリュームがありつつ繊細な口当たりで、しっかりとしたタンニンと驚くほど爽やかで長い余韻が特徴。ポルトガル伝統料理やスパイス料理、ジビエに合います。',
+          es: 'Color rubí y perfil aromático elegante de frutos silvestres y cerezas, con sutil toque vegetal y especiado de Tinta Amarela. Voluminoso pero delicado, con taninos firmes y final largo y fresco. Ideal con cocina tradicional portuguesa, platos condimentados y caza.',
+          fr: 'Robe rubis et profil aromatique élégant de fruits sauvages et cerises, avec de subtiles notes végétales et épicées de Tinta Amarela. Bouche ample mais délicate aux tanins fermes et finale longue et fraîche. Parfait avec cuisine traditionnelle portugaise, plats épicés et gibier.'
+        }
+      },
+      {
+        id: 'touriga-franca-2022',
+        exactName: 'TOURIGA FRANCA 2022',
+        style: 'tinto',
+        mouthfeel: 'structured_spicy',
+        aroma: 'dark_fruit_spice_oak',
+        foodKey: 'gameHeartyMeatSpice',
+        desc: {
+          pt: 'De cor granada intensa, no aroma sobressaem notas fruta vermelha, com toque vegetal. Revela em prova admirável volume de boca, com tanino firmes, envoltos em frescura, terminado persistente e frutado. Harmoniza na perfeição com queijos, pratos condimentados, carnes vermelhas e caça.',
+          en: 'Deep garnet colour with red fruit aromas and a subtle herbal touch. Shows admirable mouth volume with firm tannins wrapped in freshness, finishing persistent and fruity. Pairs seamlessly with cheeses, spiced dishes, red meats, and game.',
+          zh: '深邃石榴红，香气以红果为主并带轻微草本感。口感饱满有张力，单宁坚实并伴随清新感，余味持久果香。非常适合搭配奶酪、重调味菜、红肉和野味。',
+          ja: '深いガーネット色で、赤い果実の香りにほのかなハーバル感が重なります。豊かな口当たりと爽やかさに包まれたしっかりしたタンニンを持ち、果実味あふれる長い余韻へ。チーズやスパイス料理、赤身肉、ジビエによく合います。',
+          es: 'Color granate intenso, con notas de fruta roja y un toque vegetal en nariz. Muestra admirable volumen en boca, taninos firmes envueltos en frescura y final persistente y frutal. Armoniza con quesos, platos condimentados, carnes rojas y caza.',
+          fr: 'Robe grenat intense aux arômes de fruits rouges et légère note végétale. Bouche ample aux tanins fermes enrobés de fraîcheur, finale persistante et fruitée. Parfait avec fromages, plats épicés, viandes rouges et gibier.'
+        }
+      },
+      {
+        id: 'dalva-espumante-bruto-branco-2024',
+        exactName: 'Dalva Espumante Bruto Branco 2024',
+        style: 'espumante',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'seafoodAperitifLightMeat',
+        desc: {
+          pt: 'Aparência cristalina, de tonalidade amarelo-pálido. Bolha fina e contínua, com mousse cremosa e delicada. Grande riqueza aromática, predominando as notas cítricas, com nuances de flores brancas. Em prova revela acidez fresca, com apontamentos de fruta a ressurgirem no final. Um vinho versátil e fresco para servir como aperitivo, ou a acompanhar pratos leves de carnes brancas, peixes e mariscos.',
+          en: 'Crystal-clear pale-yellow look with fine, continuous bubbles and a creamy, delicate mousse. Rich aromas led by citrus and white-flower nuances, followed by fresh acidity and returning fruit notes on the finish. Versatile and fresh for aperitifs, light white meats, fish, and seafood.',
+          zh: '清澈浅黄色，气泡细腻绵密，泡沫柔滑精致。香气丰富，以柑橘与白花香为主，入口酸度清新，尾段果香重现。清新百搭，适合开胃或搭配清淡白肉、鱼类和海鲜。',
+          ja: '澄んだ淡いイエローで、きめ細かく続く泡とクリーミーで繊細なムースが楽しめます。柑橘や白い花の豊かな香りに、フレッシュな酸と戻ってくる果実味が心地よく、食前酒や軽い白身肉、魚介料理に幅広く合います。',
+          es: 'Aspecto cristalino amarillo pálido, burbuja fina y continua y mousse cremosa. Riqueza aromática con predominio cítrico y flores blancas. En boca acidez fresca y notas frutales al final. Versátil como aperitivo o con carnes blancas ligeras, pescados y mariscos.',
+          fr: 'Robe jaune pâle cristalline à bulles fines et mousse crémeuse et délicate. Nez riche d’agrumes et fleurs blanches, bouche à l’acidité fraîche et finale fruitée. Frais et polyvalent à l’apéritif ou avec viandes blanches légères, poissons et fruits de mer.'
+        }
+      },
+      {
+        id: 'reserva-branco-2024',
+        exactName: 'RESERVA BRANCO 2024',
+        style: 'branco',
+        mouthfeel: 'rich_sweet_unctuous',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'richWhiteFishRisottoCheese',
+        desc: {
+          pt: 'De cor amarelo citrino, revela um aroma elegante e fresco, com notas cítricas e suaves apontamentos a alperce e flores brancas. Na boca mostra-se equilibrado e envolvente, com acidez viva e ligeira untuosidade. Termina longo e persistente, combinando frescura e complexidade. A combinação perfeita com peixes gordos e pratos de carnes brancas.',
+          en: 'Citrus-yellow hue with an elegant, fresh aroma of citrus, soft apricot, and white flowers. Balanced and enveloping on the palate with lively acidity, slight unctuousness, and a long, persistent finish combining freshness and complexity. Ideal with oily fish and white meat dishes.',
+          zh: '柠檬黄色泽，香气优雅清新，融合柑橘、柔和杏果与白花香。入口平衡包裹感强，酸度活泼并带轻微丰润感，余味悠长，兼顾清新与复杂。非常适合搭配油脂丰厚的鱼类和白肉菜肴。',
+          ja: 'シトラスイエローで、柑橘にアプリコットや白い花の繊細な香りが重なる上品でフレッシュなアロマ。生き生きとした酸味とほのかなコクが調和し、フレッシュさと複雑さを併せ持つ長い余韻が続きます。脂の乗った魚や白身肉料理に好相性です。',
+          es: 'Color amarillo cítrico, aroma elegante y fresco con notas cítricas, suave albaricoque y flores blancas. En boca es equilibrado y envolvente, con acidez viva, ligera untuosidad y final largo. Perfecto con pescados grasos y carnes blancas.',
+          fr: 'Robe jaune citron au nez frais et élégant d’agrumes, abricot délicat et fleurs blanches. Bouche équilibrée et enveloppante à l’acidité vive et légère onctuosité, finale longue et complexe. Idéal avec poissons riches et viandes blanches.'
+        }
+      },
+      {
+        id: 'rabigato-2024',
+        exactName: 'RABIGATO 2024',
+        style: 'branco',
+        mouthfeel: 'crisp_vibrant',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'asianSeafoodLightMeat',
+        desc: {
+          pt: 'Cor aberta, amarelo ténue. No nariz apresenta aromas cítricos, com subtilezas perfumadas a flor de laranjeira. Revela uma acidez notável, estrutura firme, proporcionando um final longo e equilibrado. O carácter fresco e mineral deste branco acompanha na perfeição pratos leves de carne branca, peixe grelhado e marisco, sendo também interessante com cozinha asiática.',
+          en: 'Open pale-yellow colour with citrus aromas and subtle orange-blossom perfume. Notable acidity and firm structure lead to a long, balanced finish. Its fresh, mineral character pairs seamlessly with light white meat, grilled fish, seafood, and Asian cuisine.',
+          zh: '浅黄酒泽，散发柑橘香气与隐约橙花芬芳。酸度突出、结构紧实，收尾悠长均衡。清新矿物感非常适合搭配清淡白肉、烤鱼、海鲜，并与亚洲菜肴尤为契合。',
+          ja: '淡いイエローで、柑橘とほのかなオレンジフラワーの香りが広がります。際立つ酸としっかりした骨格があり、長くバランスの取れた余韻へ。フレッシュでミネラル感のある味わいは、軽い白身肉や焼き魚、魚介、アジアン料理にもよく合います。',
+          es: 'Color amarillo tenue, aromas cítricos con sutiles notas de flor de azahar. Acidez notable, estructura firme y final largo y equilibrado. Su carácter fresco y mineral combina con carnes blancas ligeras, pescado a la brasa, marisco y cocina asiática.',
+          fr: 'Robe jaune pâle aux arômes d’agrumes et subtiles notes de fleur d’oranger. Acidité marquée, structure ferme et finale longue et équilibrée. Son profil frais et minéral accompagne parfaitement viandes blanches légères, poissons grillés, fruits de mer et cuisine asiatique.'
+        }
+      },
+      {
+        id: 'viosinho-2024',
+        exactName: 'VIOSINHO 2024',
+        style: 'branco',
+        mouthfeel: 'rich_sweet_unctuous',
+        aroma: 'citrus_tropical_floral',
+        foodKey: 'seafoodAperitifLightMeat',
+        desc: {
+          pt: 'De cor citrina e aparência cristalina. No aroma destacam-se as notas cítricas, com nuances de flor de laranjeira. Surpreendentemente fresco no nariz e equilibrado em prova, com a acidez a surgir compensada pelo volume de boca. Um vinho envolvente, de final redondo e macio. É o aperitivo perfeito e a combinação ideal com marisco, peixes no forno ou pratos leves de carne.',
+          en: 'Citrus-toned and crystal-clear with prominent citrus aromas and orange-blossom nuances. Surprisingly fresh on the nose and balanced on the palate where acidity meets mouth volume for a round, soft finish. Ideal as an aperitif or with seafood, baked fish, and light meat dishes.',
+          zh: '柠檬黄色泽、外观清澈，柑橘香气突出并伴随橙花气息。香气清新，入口平衡，酸度与酒体相得益彰，收尾圆润柔和。是理想的开胃酒，也适合搭配海鲜、烤鱼与清淡肉类。',
+          ja: '澄んだシトラスカラーで、柑橘とオレンジフラワーの香りが際立ちます。驚くほどフレッシュな香りとバランスの取れた味わいで、酸味と口当たりのボリュームが調和し、丸みのある柔らかな余韻へ。食前酒や魚介、オーブン焼きの魚、軽い肉料理に最適です。',
+          es: 'Color cítrico y aspecto cristalino, con notas cítricas y matices de flor de azahar. Fresco en nariz y equilibrado en boca, con acidez compensada por su volumen y final redondo y suave. Ideal como aperitivo, con marisco, pescados al horno o carnes ligeras.',
+          fr: 'Robe citrine cristalline au nez d’agrumes et nuances de fleur d’oranger. Frais au nez et équilibré en bouche où l’acidité s’harmonise au volume pour une finale ronde et douce. Parfait à l’apéritif, avec fruits de mer, poissons au four ou viandes légères.'
+        }
+      }
+    ];
+
+    const PAIRINGS = {
+      redMeatCheeseMed: {
+        dish: {
+          pt: 'Carnes vermelhas assadas, queijos curados e cozinha mediterrânea',
+          en: 'Roasted red meats, aged cheeses, and Mediterranean cuisine',
+          zh: '烤红肉、陈年奶酪与地中海风味菜肴',
+          ja: 'ローストした赤身肉、熟成チーズ、地中海料理',
+          es: 'Carnes rojas asadas, quesos curados y cocina mediterránea',
+          fr: 'Viandes rouges rôties, fromages affinés et cuisine méditerranéenne'
+        },
+        reason: {
+          pt: 'A estrutura, a acidez equilibrada e o perfil frutado deste vinho harmonizam com a intensidade das carnes e queijos sem perder frescura.',
+          en: 'This wine’s structure, balanced acidity, and fruit profile stand up to rich meats and cheeses while keeping the palate fresh.',
+          zh: '这款酒的结构、均衡酸度与果香能衬托浓郁肉类和奶酪的风味，同时保持口感清新。',
+          ja: 'しっかりした骨格とバランスの取れた酸、果実味が、濃厚な肉やチーズの旨味を引き立てつつ爽やかさを保ちます。',
+          es: 'La estructura, la acidez equilibrada y el perfil frutal acompañan carnes y quesos intensos manteniendo la frescura.',
+          fr: 'Sa structure, son acidité équilibrée et son fruité soutiennent les viandes et fromages riches tout en gardant de la fraîcheur.'
+        }
+      },
+      gameHeartyMeatSpice: {
+        dish: {
+          pt: 'Pratos de caça, carnes intensas e receitas condimentadas',
+          en: 'Game dishes, hearty meats, and spiced recipes',
+          zh: '野味菜肴、厚重肉类与香料调味菜',
+          ja: 'ジビエ料理、力強い肉料理、スパイスを効かせた料理',
+          es: 'Platos de caza, carnes intensas y recetas condimentadas',
+          fr: 'Plats de gibier, viandes puissantes et recettes épicées'
+        },
+        reason: {
+          pt: 'A profundidade aromática, as especiarias e a presença em boca criam um contraste elegante com pratos mais intensos e temperados.',
+          en: 'Its aromatic depth, spice nuances, and palate grip balance bold, seasoned dishes effortlessly.',
+          zh: '深邃的香气层次、辛香风味与稳健口感，与浓味和香料菜肴形成优雅呼应。',
+          ja: '奥行きのあるアロマやスパイス感、口中の存在感が、力強くスパイスを使った料理と心地よく響き合います。',
+          es: 'Su profundidad aromática, notas especiadas y presencia en boca equilibran platos potentes y bien condimentados.',
+          fr: 'Sa profondeur aromatique, ses épices et sa tenue en bouche répondent avec élégance aux plats corsés et relevés.'
+        }
+      },
+      comfortGrillWhiteMeat: {
+        dish: {
+          pt: 'Carnes brancas grelhadas, comida de conforto e queijos de intensidade média',
+          en: 'Grilled white meats, comfort food, and medium-intensity cheeses',
+          zh: '烤白肉、家常暖心菜与中等风味奶酪',
+          ja: 'グリルした白身肉、家庭料理、マイルド〜中程度のチーズ',
+          es: 'Carnes blancas a la brasa, comida de confort y quesos de intensidad media',
+          fr: 'Viandes blanches grillées, cuisine réconfortante et fromages d’intensité moyenne'
+        },
+        reason: {
+          pt: 'A textura macia e a frescura equilibrada acompanham pratos reconfortantes sem pesar no paladar.',
+          en: 'Its supple texture and balanced freshness complement comforting plates without feeling heavy.',
+          zh: '柔和的质地与清新的酸度贴合家常菜肴，口感顺滑不厚重。',
+          ja: '柔らかな質感と爽やかなバランスが、ほっとする料理に寄り添い重たくなりません。',
+          es: 'Su textura suave y su frescura equilibrada acompañan platos reconfortantes sin resultar pesados.',
+          fr: 'Sa texture souple et sa fraîcheur équilibrée accompagnent les plats réconfortants sans alourdir le palais.'
+        }
+      },
+      seafoodAperitifLightMeat: {
+        dish: {
+          pt: 'Mariscos, peixes frescos, aperitivos e pratos leves de carne branca',
+          en: 'Seafood, fresh fish, aperitifs, and light white meat dishes',
+          zh: '海鲜、鲜鱼、开胃小食与清淡白肉',
+          ja: '魚介類、フレッシュな魚料理、アペリティフ、軽い白身肉',
+          es: 'Mariscos, pescados frescos, aperitivos y platos ligeros de carne blanca',
+          fr: 'Fruits de mer, poissons frais, apéritifs et plats légers de volaille ou viande blanche'
+        },
+        reason: {
+          pt: 'A acidez viva e o perfil cítrico ou frutado limpam e realçam a delicadeza do mar, dos aperitivos e dos pratos leves.',
+          en: 'Crisp acidity and bright citrus or fruit notes refresh and lift delicate seafood, aperitifs, and light plates.',
+          zh: '明快的酸度与清新的柑橘或果香能提亮海鲜、开胃菜与清淡料理的鲜美。',
+          ja: '生き生きとした酸と柑橘や果実の爽やかさが、魚介やアペリティフ、軽い料理の繊細さを引き立てます。',
+          es: 'La acidez viva y las notas cítricas o frutales realzan mariscos, aperitivos y platos suaves.',
+          fr: 'L’acidité vive et les notes d’agrumes ou de fruits subliment les fruits de mer, l’apéritif et les mets légers.'
+        }
+      },
+      vegetarianSaladLightFish: {
+        dish: {
+          pt: 'Saladas frescas, gratinados de legumes, peixes leves e aperitivos',
+          en: 'Fresh salads, vegetable gratins, light fish, and aperitifs',
+          zh: '清爽沙拉、蔬菜焗烤、清淡鱼类与开胃酒',
+          ja: 'フレッシュサラダ、野菜のグラタン、軽い魚料理、食前酒',
+          es: 'Ensaladas frescas, gratinados de verduras, pescados ligeros y aperitivos',
+          fr: 'Salades fraîches, gratins de légumes, poissons légers et apéritifs'
+        },
+        reason: {
+          pt: 'A frescura limpa e o perfil aromático direto respeitam os vegetais e ervas sem sobrepor sabores delicados.',
+          en: 'Clean freshness and focused aromatics respect garden vegetables and herbs without overpowering delicate flavours.',
+          zh: '干净的清新感与纯粹香气衬托蔬菜和香草本味，不会掩盖清雅风味。',
+          ja: '澄んだ爽やかさとピュアなアロマが、野菜やハーブの繊細な風味を損なわずに引き立てます。',
+          es: 'Su frescura limpia y perfil aromático respetan verduras y hierbas sin cubrir sabores delicados.',
+          fr: 'Sa fraîcheur nette et son profil aromatique respectent les légumes et herbes sans dominer les saveurs délicates.'
+        }
+      },
+      richWhiteFishRisottoCheese: {
+        dish: {
+          pt: 'Peixes gordos, risotos de cogumelos ou trufas e queijos maturados',
+          en: 'Oily fish, mushroom or truffle risottos, and aged cheeses',
+          zh: '油脂丰厚的鱼类、蘑菇或松露烩饭与陈年奶酪',
+          ja: '脂の乗った魚、キノコやトリュフのリゾット、熟成チーズ',
+          es: 'Pescados grasos, risottos de setas o trufa y quesos curados',
+          fr: 'Poissons riches, risottos aux champignons ou truffe et fromages affinés'
+        },
+        reason: {
+          pt: 'O volume em boca, a untuosidade e a complexidade aromática dialogam com texturas cremosas e pratos de maior riqueza.',
+          en: 'Mouth volume, creamy texture, and aromatic complexity match rich dishes and savoury risottos.',
+          zh: '饱满的酒体、润泽质感与复杂香气，能够呼应浓郁菜肴与醇厚烩饭。',
+          ja: '口当たりのボリュームとコク、複雑なアロマが、コクのある料理やリゾットの旨味と調和します。',
+          es: 'El volumen en boca, la untuosidad y la complejidad aromática acompañan platos cremosos y de mayor intensidad.',
+          fr: 'Le volume en bouche, l’onctuosité et la complexité aromatique s’accordent aux plats riches et crémeux.'
+        }
+      },
+      asianSeafoodLightMeat: {
+        dish: {
+          pt: 'Cozinha asiática, mariscos, peixes grelhados e carnes brancas leves',
+          en: 'Asian cuisine, seafood, grilled fish, and light white meats',
+          zh: '亚洲菜肴、海鲜、烤鱼与清淡白肉',
+          ja: 'アジアン料理、魚介、グリルした魚、軽い白身肉',
+          es: 'Cocina asiática, mariscos, pescados a la brasa y carnes blancas ligeras',
+          fr: 'Cuisine asiatique, fruits de mer, poissons grillés et viandes blanches légères'
+        },
+        reason: {
+          pt: 'O carácter mineral e a acidez firme acompanham temperos variados, cítricos e pratos de textura leve.',
+          en: 'Its mineral edge and firm acidity pair cleanly with diverse seasonings, citrus accents, and light textures.',
+          zh: '鲜明的矿物感与稳健酸度，能自然搭配多样调味、柑橘风味与轻盈口感的菜肴。',
+          ja: 'ミネラル感としっかりした酸が、多彩なスパイスや柑橘、軽やかな料理と心地よく合います。',
+          es: 'Su carácter mineral y acidez firme acompañan especias variadas, notas cítricas y platos ligeros.',
+          fr: 'Son caractère minéral et son acidité nette s’accordent aux épices variées, notes d’agrumes et mets légers.'
+        }
+      },
+      dessertsAperitif: {
+        dish: {
+          pt: 'Sobremesas, doces de amêndoa ou citrinos, queijos cremosos e aperitivos',
+          en: 'Desserts, almond or citrus sweets, creamy cheeses, and aperitifs',
+          zh: '甜点、杏仁或柑橘甜品、奶油奶酪与开胃酒',
+          ja: 'デザート、アーモンドや柑橘のスイーツ、クリーミーなチーズ、食前酒',
+          es: 'Postres, dulces de almendra o cítricos, quesos cremosos y aperitivos',
+          fr: 'Desserts, douceurs aux amandes ou agrumes, fromages crémeux et apéritifs'
+        },
+        reason: {
+          pt: 'A doçura envolvente equilibrada por frescura e notas aromáticas intensas prolonga o final à mesa com elegância.',
+          en: 'Enveloping sweetness balanced by freshness and vivid aromatics creates a memorable, lingering finish.',
+          zh: '包裹感十足的甜度与清新果香、花香相平衡，为餐桌带来优雅绵长的收尾。',
+          ja: '包み込むような甘みと爽やかさ、豊かなアロマが調和し、食後のひとときを上品に締めくくります。',
+          es: 'La dulzura envolvente equilibrada con frescura y aromas intensos ofrece un final elegante y prolongado.',
+          fr: 'La douceur enveloppante équilibrée par la fraîcheur et des arômes vifs prolonge le repas avec élégance.'
+        }
+      }
+    };
+
+    const QUESTION_POOL = [
+      {
+        category: {
+          pt: 'Comportamento na boca',
+          en: 'Palate & Mouthfeel',
+          zh: '口腔表现',
+          ja: '口当たり・味わい',
+          es: 'Comportamiento en la boca',
+          fr: 'Comportement en bouche'
+        },
+        prompt: {
+          pt: 'Qual é o comportamento na boca que mais aprecia num vinho?',
+          en: 'Which mouthfeel do you enjoy most in a wine?',
+          zh: '您最喜欢葡萄酒在口腔中的哪种表现？',
+          ja: 'ワインの口当たりで最も好みなのはどれですか？',
+          es: '¿Qué comportamiento en la boca aprecias más en un vino?',
+          fr: 'Quel comportement en bouche appréciez-vous le plus dans un vin ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Textura sedosa ou macia com elegância equilibrada',
+              en: 'Silky or soft texture with balanced elegance',
+              zh: '丝滑或柔和质地，优雅均衡',
+              ja: 'シルキーまたは滑らかで上品なバランス',
+              es: 'Textura sedosa o suave con elegancia equilibrada',
+              fr: 'Texture soyeuse ou souple à l’élégance équilibrée'
+            },
+            weights: { mouthfeel: 'velvety', style: 'tinto' }
+          },
+          {
+            label: {
+              pt: 'Acidez viva, frescura vibrante e sensação leve ou borbulhante',
+              en: 'Lively acidity, vibrant freshness, and a crisp or sparkling feel',
+              zh: '酸度活泼、清新明快，带清爽感或气泡感',
+              ja: '生き生きとした酸、爽やかさ、軽快感や泡立ち',
+              es: 'Acidez viva, frescura vibrante y sensación ligera o burbujeante',
+              fr: 'Acidité vive, fraîcheur vibrante et sensation légère ou pétillante'
+            },
+            weights: { mouthfeel: 'crisp_vibrant', style: 'branco' }
+          },
+          {
+            label: {
+              pt: 'Estrutura firme, volume marcante ou doçura envolvente',
+              en: 'Firm structure, bold volume, or enveloping richness',
+              zh: '结构紧实、酒体饱满或醇厚甘润',
+              ja: 'しっかりした骨格、ボリューム感、または甘美なコク',
+              es: 'Estructura firme, volumen marcado o dulzura envolvente',
+              fr: 'Structure ferme, volume marqué ou douceur enveloppante'
+            },
+            weights: { mouthfeel: 'structured_spicy' }
+          }
+        ]
+      },
+      {
+        category: {
+          pt: 'Paleta aromática',
+          en: 'Aromatic Palette',
+          zh: '香气调色盘',
+          ja: 'アロマのパレット',
+          es: 'Paleta aromática',
+          fr: 'Palette aromatique'
+        },
+        prompt: {
+          pt: 'Que paleta aromática desperta mais a sua atenção ao cheirar o copo?',
+          en: 'Which aromatic palette draws your attention most in the glass?',
+          zh: '杯中哪一种香气调色盘最吸引您？',
+          ja: 'グラスから立ち上る香りで最も惹かれるのはどれですか？',
+          es: '¿Qué paleta aromática llama más tu atención al oler la copa?',
+          fr: 'Quelle palette aromatique attire le plus votre attention au nez ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Frutos vermelhos maduros, morango, framboesa e flores',
+              en: 'Ripe red berries, strawberry, raspberry, and floral notes',
+              zh: '成熟红果、草莓、覆盆子与花香',
+              ja: '熟した赤い果実、イチゴ、ラズベリー、花の香り',
+              es: 'Frutos rojos maduros, fresa, frambuesa y notas florales',
+              fr: 'Fruits rouges mûrs, fraise, framboise et notes florales'
+            },
+            weights: { aroma: 'red_fruit_floral' }
+          },
+          {
+            label: {
+              pt: 'Cítricos frescos, flor de laranjeira, fruta tropical ou damasco',
+              en: 'Fresh citrus, orange blossom, tropical fruit, or apricot',
+              zh: '清新柑橘、橙花、热带水果或杏果',
+              ja: 'フレッシュな柑橘、オレンジフラワー、トロピカルやアプリコット',
+              es: 'Cítricos frescos, flor de azahar, fruta tropical o albaricoque',
+              fr: 'Agrumes frais, fleur d’oranger, fruits tropicaux ou abricot'
+            },
+            weights: { aroma: 'citrus_tropical_floral' }
+          },
+          {
+            label: {
+              pt: 'Fruta preta intensa, especiarias, pimenta ou notas de madeira',
+              en: 'Intense black fruit, spices, pepper, or oak nuances',
+              zh: '浓郁黑果、香料、黑胡椒或木桶气息',
+              ja: '力強い黒系果実、スパイス、胡椒、樽のニュアンス',
+              es: 'Fruta negra intensa, especias, pimienta o notas de madera',
+              fr: 'Fruits noirs intenses, épices, poivre ou nuances boisées'
+            },
+            weights: { aroma: 'dark_fruit_spice_oak' }
+          }
+        ]
+      },
+      {
+        category: {
+          pt: 'Gastronomia · Carnes e Pratos',
+          en: 'Food · Meats & Mains',
+          zh: '美食 · 肉类与主菜',
+          ja: '料理 · 肉料理とメイン',
+          es: 'Gastronomía · Carnes y platos',
+          fr: 'Gastronomie · Viandes & plats'
+        },
+        prompt: {
+          pt: 'Qual destas refeições principais gostaria mais de ter à mesa?',
+          en: 'Which main meal would you most like to enjoy at the table?',
+          zh: '餐桌上您最想享用哪一类主菜？',
+          ja: '食卓で最も楽しみたいメイン料理はどれですか？',
+          es: '¿Cuál de estas comidas principales te gustaría más tener en la mesa?',
+          fr: 'Lequel de ces plats principaux préféreriez-vous à table ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Carnes vermelhas, pratos de caça ou cozinha bem condimentada',
+              en: 'Red meats, game dishes, or richly spiced cooking',
+              zh: '红肉、野味菜肴或浓郁香料菜',
+              ja: '赤身肉、ジビエ料理、スパイスを効かせた料理',
+              es: 'Carnes rojas, platos de caza o cocina bien condimentada',
+              fr: 'Viandes rouges, plats de gibier ou cuisine relevée'
+            },
+            weights: { style: 'tinto', aroma: 'dark_fruit_spice_oak', foodKey: 'gameHeartyMeatSpice' }
+          },
+          {
+            label: {
+              pt: 'Carnes brancas grelhadas, comida de conforto ou cozinha mediterrânea',
+              en: 'Grilled white meats, comfort food, or Mediterranean dishes',
+              zh: '烤白肉、家常暖心菜或地中海料理',
+              ja: 'グリルした白身肉、家庭料理、地中海料理',
+              es: 'Carnes blancas a la brasa, comida de confort o cocina mediterránea',
+              fr: 'Viandes blanches grillées, cuisine réconfortante ou cuisine méditerranéenne'
+            },
+            weights: { mouthfeel: 'velvety', foodKey: 'comfortGrillWhiteMeat' }
+          },
+          {
+            label: {
+              pt: 'Pratos vegetarianos, saladas, risotos ou refeições leves',
+              en: 'Vegetarian dishes, salads, risottos, or lighter plates',
+              zh: '素食料理、沙拉、烩饭或轻盈菜肴',
+              ja: 'ベジタリアン料理、サラダ、リゾット、軽めの料理',
+              es: 'Platos vegetarianos, ensaladas, risottos o comidas ligeras',
+              fr: 'Plats végétariens, salades, risottos ou assiettes légères'
+            },
+            weights: { style: 'branco', foodKey: 'vegetarianSaladLightFish' }
+          }
+        ]
+      },
+      {
+        category: {
+          pt: 'Gastronomia · Mar e Sobremesas',
+          en: 'Food · Seafood & Sweets',
+          zh: '美食 · 海鲜与甜点',
+          ja: '料理 · 魚介とスイーツ',
+          es: 'Gastronomía · Mar y postres',
+          fr: 'Gastronomie · Mer & desserts'
+        },
+        prompt: {
+          pt: 'Se o prato envolver mar, cozinha asiática ou final doce, o que prefere?',
+          en: 'When pairing with seafood, Asian flavours, or a sweet finish, what do you prefer?',
+          zh: '若搭配海鲜、亚洲风味或甜品收尾，您更倾向哪一种？',
+          ja: '魚介やアジアン料理、デザートに合わせるならどれを選びますか？',
+          es: 'Si el plato incluye mar, cocina asiática o toque dulce, ¿qué prefieres?',
+          fr: 'Pour la mer, la cuisine asiatique ou une touche sucrée, que préférez-vous ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Marisco, peixe grelhado ou cozinha asiática fresca',
+              en: 'Seafood, grilled fish, or fresh Asian cuisine',
+              zh: '海鲜、烤鱼或清新亚洲菜肴',
+              ja: '魚介類、焼き魚、フレッシュなアジアン料理',
+              es: 'Marisco, pescado a la brasa o cocina asiática fresca',
+              fr: 'Fruits de mer, poisson grillé ou cuisine asiatique fraîche'
+            },
+            weights: { style: 'branco', mouthfeel: 'crisp_vibrant', foodKey: 'asianSeafoodLightMeat' }
+          },
+          {
+            label: {
+              pt: 'Peixes gordos, queijos maturados ou risoto de cogumelos',
+              en: 'Oily fish, aged cheeses, or mushroom risotto',
+              zh: '油脂丰厚的鱼类、陈年奶酪或蘑菇烩饭',
+              ja: '脂の乗った魚、熟成チーズ、キノコのリゾット',
+              es: 'Pescados grasos, quesos curados o risotto de setas',
+              fr: 'Poissons riches, fromages affinés ou risotto aux champignons'
+            },
+            weights: { mouthfeel: 'rich_sweet_unctuous', foodKey: 'richWhiteFishRisottoCheese' }
+          },
+          {
+            label: {
+              pt: 'Sobremesas, citrinos, amêndoa ou queijos cremosos',
+              en: 'Desserts, citrus sweets, almond tarts, or creamy cheeses',
+              zh: '甜点、柑橘甜品、杏仁点心或奶油奶酪',
+              ja: 'デザート、柑橘やアーモンドの菓子、クリーミーなチーズ',
+              es: 'Postres, dulces cítricos, almendra o quesos cremosos',
+              fr: 'Desserts, douceurs citronnées, amandes ou fromages crémeux'
+            },
+            weights: { style: 'doce_fortificado', mouthfeel: 'rich_sweet_unctuous', foodKey: 'dessertsAperitif' }
+          }
+        ]
+      },
+      {
+        category: {
+          pt: 'Estilo & Momento',
+          en: 'Style & Occasion',
+          zh: '风格与时刻',
+          ja: 'スタイルとシーン',
+          es: 'Estilo y momento',
+          fr: 'Style & moment'
+        },
+        prompt: {
+          pt: 'Que estilo de vinho e momento combina melhor consigo hoje?',
+          en: 'Which wine style and moment suits you best today?',
+          zh: '今天哪一种葡萄酒风格与氛围最契合您？',
+          ja: '今日の気分やシーンに最も合うスタイルはどれですか？',
+          es: '¿Qué estilo de vino y momento encaja mejor contigo hoy?',
+          fr: 'Quel style de vin et quel moment vous correspondent le mieux aujourd’hui ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Tinto elegante ou estruturado para acompanhar a conversa e a mesa',
+              en: 'Elegant or structured red to accompany conversation and dinner',
+              zh: '优雅或结构感强的红葡萄酒，适合佐餐与畅谈',
+              ja: '会話や食事を引き立てる上品または骨格ある赤ワイン',
+              es: 'Tinto elegante o estructurado para acompañar la charla y la mesa',
+              fr: 'Rouge élégant ou structuré pour accompagner le repas et l’échange'
+            },
+            weights: { style: 'tinto', foodKey: 'redMeatCheeseMed' }
+          },
+          {
+            label: {
+              pt: 'Espumante ou rosé refrescante para abrir o apetite ou celebrar',
+              en: 'Refreshing sparkling or rosé to open the appetite or celebrate',
+              zh: '清爽起泡酒或桃红酒，适合开胃或欢庆时刻',
+              ja: '食前酒や乾杯にぴったりな爽やかなスパークリングやロゼ',
+              es: 'Espumoso o rosado refrescante para abrir el apetito o celebrar',
+              fr: 'Effervescent ou rosé rafraîchissant pour l’apéritif ou célébrer'
+            },
+            weights: { style: 'espumante', mouthfeel: 'crisp_vibrant', foodKey: 'seafoodAperitifLightMeat' }
+          },
+          {
+            label: {
+              pt: 'Vinho doce ou fortificado para fechar a refeição com intensidade',
+              en: 'Sweet or fortified wine to close the meal with depth',
+              zh: '甜型或强化酒，以浓郁韵味为餐食收尾',
+              ja: '食事の締めくくりに深みを与える甘口または酒精強化ワイン',
+              es: 'Vino dulce o fortificado para cerrar la comida con intensidad',
+              fr: 'Vin doux ou fortifié pour conclure le repas avec intensité'
+            },
+            weights: { style: 'doce_fortificado', aroma: 'citrus_tropical_floral', foodKey: 'dessertsAperitif' }
+          }
+        ]
+      },
+      {
+        category: {
+          pt: 'Sensação Térmica & Final',
+          en: 'Finish & Character',
+          zh: '收尾与个性',
+          ja: '余韻と個性',
+          es: 'Sensación y final',
+          fr: 'Finale & caractère'
+        },
+        prompt: {
+          pt: 'O que procura no final de prova quando o vinho termina no paladar?',
+          en: 'What do you look for on the finish as the wine lingers on your palate?',
+          zh: '当酒液在口腔中回味时，您最期待怎样的收尾？',
+          ja: '口中に余韻が残るフィニッシュで、どのような印象を求めますか？',
+          es: '¿Qué buscas en el final cuando el vino permanece en el paladar?',
+          fr: 'Que recherchez-vous en finale lorsque le vin persiste en bouche ?'
+        },
+        options: [
+          {
+            label: {
+              pt: 'Final longo, frutado e macio com notas florais ou de fruta vermelha',
+              en: 'Long, fruity, soft finish with floral or red-berry notes',
+              zh: '悠长、果味柔和，带花香或红果余韵',
+              ja: '花や赤い果実を感じさせる、長くフルーティーで柔らかな余韻',
+              es: 'Final largo, frutal y suave con notas florales o de fruta roja',
+              fr: 'Finale longue, fruitée et souple aux notes florales ou de fruits rouges'
+            },
+            weights: { mouthfeel: 'velvety', aroma: 'red_fruit_floral', foodKey: 'comfortGrillWhiteMeat' }
+          },
+          {
+            label: {
+              pt: 'Final fresco, mineral ou cítrico que deixa o paladar leve',
+              en: 'Fresh, mineral, or citrus finish that keeps the palate lively',
+              zh: '清新、矿物感或柑橘感收尾，让味蕾轻盈明快',
+              ja: 'フレッシュでミネラルや柑橘が香る、軽やかで心地よい余韻',
+              es: 'Final fresco, mineral o cítrico que deja el paladar ligero',
+              fr: 'Finale fraîche, minérale ou citronnée laissant le palais léger'
+            },
+            weights: { style: 'branco', mouthfeel: 'crisp_vibrant', aroma: 'citrus_tropical_floral', foodKey: 'seafoodAperitifLightMeat' }
+          },
+          {
+            label: {
+              pt: 'Final intenso, especiado ou complexo que convida a ficar',
+              en: 'Intense, spicy, or complex finish that invites you to linger',
+              zh: '浓郁、辛香或复杂收尾，让人流连回味',
+              ja: '力強くスパイシーまたは複雑で、余韻に浸りたくなるフィニッシュ',
+              es: 'Final intenso, especiado o complejo que invita a quedarse',
+              fr: 'Finale intense, épicée ou complexe qui invite à prolonger l’instant'
+            },
+            weights: { mouthfeel: 'structured_spicy', aroma: 'dark_fruit_spice_oak', foodKey: 'gameHeartyMeatSpice' }
+          }
+        ]
+      }
+    ];
+
+    const UI_TEXT = {
+      pt: {
+        heroSubtitle: 'Vinhos do Douro, prova sensorial personalizada e história na margem do rio',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: 'Carta Digital de Vinhos',
+        cartaSubtitle: 'Todos os vinhos do catálogo da Quinta de Ventozelo com o nome exato e as notas do documento.',
+        filterAll: 'Todos',
+        filterTinto: 'Tintos',
+        filterBranco: 'Brancos',
+        filterEspumante: 'Espumante',
+        filterDoce: 'Moscatel, Late Harvest & Porto',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: 'Responde a 5 perguntas sobre o comportamento na boca, paleta aromática e gastronomia. Cada sessão gera novas perguntas.',
+        questionLabel: 'Pergunta',
+        ofLabel: 'de',
+        newQuestionsBtn: 'Gerar novas perguntas',
+        restartQuizBtn: 'Refazer teste',
+        resultBadge: 'A tua escolha recomendada',
+        pairingLabel: 'Prato recomendado',
+        whyLabel: 'Por que combina',
+        viewInCartaBtn: 'Ver na Carta',
+        historiaTitle: 'História da Quinta de Ventozelo',
+        historiaSubtitle: 'Uma das quintas mais antigas e extensas do Douro, na margem esquerda do rio, em São João da Pesqueira.',
+        historyP1: 'Situada na margem esquerda do rio Douro, em São João da Pesqueira, a Quinta de Ventozelo estende-se por cerca de 400 hectares — incluindo vinhas, olivais, mata mediterrânica e trilhos — sendo uma das propriedades mais antigas e emblemáticas da região.',
+        historyP2: 'As primeiras referências documentais remontam à Idade Média, com ligação histórica aos monges cistercienses e ao Mosteiro de São Pedro das Águias, passando ao longo dos séculos por diferentes mãos que moldaram os socalcos e a vida agrícola duriense.',
+        historyP3: 'Hoje, o projeto alia a tradição vitivinícola e enológica do Douro ao enoturismo, à gastronomia local e ao respeito pela natureza, oferecendo aos visitantes uma vivência autêntica num cenário único sobre o rio.',
+        footerCopy: 'Quinta de Ventozelo · Douro, Portugal · Carta, Qual é o teu vinho & História'
+      },
+      en: {
+        heroSubtitle: 'Douro wines, tailored tasting guidance, and riverfront heritage',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: 'Digital Wine List',
+        cartaSubtitle: 'Every wine from the Quinta de Ventozelo PDF with its exact name and tasting notes.',
+        filterAll: 'All',
+        filterTinto: 'Reds',
+        filterBranco: 'Whites',
+        filterEspumante: 'Sparkling',
+        filterDoce: 'Moscatel, Late Harvest & Port',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: 'Answer 5 questions on mouthfeel, aromatic palette, and food pairings. Every session generates fresh questions.',
+        questionLabel: 'Question',
+        ofLabel: 'of',
+        newQuestionsBtn: 'Generate new questions',
+        restartQuizBtn: 'Take quiz again',
+        resultBadge: 'Your recommended match',
+        pairingLabel: 'Suggested dish',
+        whyLabel: 'Why it pairs well',
+        viewInCartaBtn: 'View in Carta',
+        historiaTitle: 'History of Quinta de Ventozelo',
+        historiaSubtitle: 'One of the oldest and largest estates in the Douro, on the left bank in São João da Pesqueira.',
+        historyP1: 'Set on the left bank of the Douro River in São João da Pesqueira, Quinta de Ventozelo spans roughly 400 hectares of terraced vineyards, olive groves, Mediterranean woodland, and trails as one of the region’s historic estates.',
+        historyP2: 'Early documentary records trace back to medieval times and Cistercian monastic heritage linked to São Pedro das Águias, evolving across centuries through generations that shaped its agricultural landscape.',
+        historyP3: 'Today, Quinta de Ventozelo pairs Douro winemaking craft with hospitality, local cuisine, and biodiversity stewardship overlooking the river.',
+        footerCopy: 'Quinta de Ventozelo · Douro, Portugal · Carta, Qual é o teu vinho & História'
+      },
+      zh: {
+        heroSubtitle: '杜罗河产区葡萄酒、个性化品鉴引导与河畔庄园历史',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: '数字酒单',
+        cartaSubtitle: '收录文托塞卢庄园（Quinta de Ventozelo）资料中的全部酒款，保留准确名称与品鉴描述。',
+        filterAll: '全部',
+        filterTinto: '红葡萄酒',
+        filterBranco: '白葡萄酒',
+        filterEspumante: '起泡酒',
+        filterDoce: '莫斯卡特尔、晚收与波特',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: '回答 5 道关于口腔表现、香气调色盘与餐酒搭配的问题，每次都会生成新题目。',
+        questionLabel: '第',
+        ofLabel: '题 / 共 5 题',
+        newQuestionsBtn: '生成新题目',
+        restartQuizBtn: '重新测试',
+        resultBadge: '为您推荐的酒款',
+        pairingLabel: '推荐菜肴',
+        whyLabel: '搭配理由',
+        viewInCartaBtn: '在酒单中查看',
+        historiaTitle: '文托塞卢庄园历史',
+        historiaSubtitle: '位于杜罗河南岸圣若昂达佩什凯拉（São João da Pesqueira），是该地区最古老、规模最大的庄园之一。',
+        historyP1: '文托塞卢庄园坐落于杜罗河左岸的圣若昂达佩什凯拉，占地约 400 公顷，涵盖梯田葡萄园、橄榄林、地中海植被与自然步道，是杜罗河谷历史悠久的标志性庄园。',
+        historyP2: '庄园的历史记载可追溯至中世纪，与熙笃会及圣佩德罗达斯阿吉亚斯修道院渊源深厚，历经数百年演变，塑造了独特的农业与梯田风貌。',
+        historyP3: '如今，庄园将杜罗酿酒传统与酒庄旅居、地道美食及生态保护融为一体，在俯瞰杜罗河的壮丽景色中呈现真实体验。',
+        footerCopy: 'Quinta de Ventozelo · 杜罗河，葡萄牙 · Carta, Qual é o teu vinho & História'
+      },
+      ja: {
+        heroSubtitle: 'ドウロのワイン、味わいの提案、そして河畔のワイナリーの歴史',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: 'デジタル・ワインリスト',
+        cartaSubtitle: 'キンタ・デ・ヴェントゥゼロの資料にある全ワインを、正確な名称と解説で掲載しています。',
+        filterAll: 'すべて',
+        filterTinto: '赤ワイン',
+        filterBranco: '白ワイン',
+        filterEspumante: 'スパークリング',
+        filterDoce: 'モスカテル・レイトハーベスト・ポート',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: '口当たり・アロマのパレット・料理の好みに答える5つの質問。毎回新しい質問が生成されます。',
+        questionLabel: '質問',
+        ofLabel: '/',
+        newQuestionsBtn: '新しい質問を生成',
+        restartQuizBtn: 'もう一度診断する',
+        resultBadge: 'おすすめのワイン',
+        pairingLabel: 'おすすめの料理',
+        whyLabel: 'ペアリングの理由',
+        viewInCartaBtn: 'リストで見る',
+        historiaTitle: 'キンタ・デ・ヴェントゥゼロの歴史',
+        historiaSubtitle: 'サン・ジョアン・ダ・ペスケイラ、ドウロ川左岸に位置する最も古く広大なキンタ（葡萄園領地）の一つ。',
+        historyP1: 'ドウロ川左岸のサン・ジョアン・ダ・ペスケイラに広がるキンタ・デ・ヴェントゥゼロは、段々畑のブドウ畑やオリーブ林、地中海性植生、散策路を含む約400ヘクタールの歴史ある領地です。',
+        historyP2: '文献上の記録は中世にさかのぼり、シトー会やサン・ペドロ・ダス・アギアス修道院とのつながりを持ちながら、幾世代にもわたり段々畑と農耕の景観が育まれてきました。',
+        historyP3: '現在はドウロのワイン造りの伝統に加え、ワイナリー滞在や地元の食文化、自然環境の保全を融合させ、川を見渡す穏やかな体験を提供しています。',
+        footerCopy: 'Quinta de Ventozelo · ドウロ、ポルトガル · Carta, Qual é o teu vinho & História'
+      },
+      es: {
+        heroSubtitle: 'Vinos del Duero, cata guiada según tu gusto e historia junto al río',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: 'Carta Digital de Vinos',
+        cartaSubtitle: 'Todos los vinos del PDF de Quinta de Ventozelo con su nombre exacto y descripción.',
+        filterAll: 'Todos',
+        filterTinto: 'Tintos',
+        filterBranco: 'Blancos',
+        filterEspumante: 'Espumoso',
+        filterDoce: 'Moscatel, Late Harvest y Oporto',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: 'Responde 5 preguntas sobre comportamiento en la boca, paleta aromática y comida. Cada vez se generan preguntas nuevas.',
+        questionLabel: 'Pregunta',
+        ofLabel: 'de',
+        newQuestionsBtn: 'Generar preguntas nuevas',
+        restartQuizBtn: 'Repetir test',
+        resultBadge: 'Tu vino recomendado',
+        pairingLabel: 'Plato recomendado',
+        whyLabel: 'Por qué combina',
+        viewInCartaBtn: 'Ver en Carta',
+        historiaTitle: 'Historia de Quinta de Ventozelo',
+        historiaSubtitle: 'Una de las quintas más antiguas y extensas del Duero, en la margen izquierda en São João da Pesqueira.',
+        historyP1: 'Situada en la margen izquierda del río Duero, en São João da Pesqueira, Quinta de Ventozelo abarca cerca de 400 hectáreas con viñedos en bancales, olivares, monte mediterráneo y senderos.',
+        historyP2: 'Sus primeras menciones documentales se remontan a la Edad Media, vinculada a los monjes cistercienses y al monasterio de São Pedro das Águias, moldeándose a lo largo de los siglos.',
+        historyP3: 'Hoy une la tradición vitivinícola del Duero con el enoturismo, la gastronomía y el cuidado del entorno natural sobre el valle del río.',
+        footerCopy: 'Quinta de Ventozelo · Duero, Portugal · Carta, Qual é o teu vinho & História'
+      },
+      fr: {
+        heroSubtitle: 'Vins du Douro, accord sur mesure et histoire en bord de fleuve',
+        tabCarta: 'Carta',
+        tabQuiz: 'Qual é o teu vinho',
+        tabHistoria: 'História',
+        cartaTitle: 'Carte des Vins Numérique',
+        cartaSubtitle: 'Tous les vins du PDF de Quinta de Ventozelo avec leur nom exact et leur description.',
+        filterAll: 'Tous',
+        filterTinto: 'Rouges',
+        filterBranco: 'Blancs',
+        filterEspumante: 'Effervescent',
+        filterDoce: 'Moscatel, Late Harvest & Porto',
+        quizTitle: 'Qual é o teu vinho',
+        quizSubtitle: 'Répondez à 5 questions sur la bouche, la palette aromatique et la gastronomie. De nouvelles questions sont générées à chaque fois.',
+        questionLabel: 'Question',
+        ofLabel: 'sur',
+        newQuestionsBtn: 'Générer de nouvelles questions',
+        restartQuizBtn: 'Refaire le test',
+        resultBadge: 'Votre accord recommandé',
+        pairingLabel: 'Plat conseillé',
+        whyLabel: 'Pourquoi cet accord',
+        viewInCartaBtn: 'Voir dans la Carta',
+        historiaTitle: 'Histoire de Quinta de Ventozelo',
+        historiaSubtitle: 'L’un des domaines les plus anciens et vastes du Douro, sur la rive gauche à São João da Pesqueira.',
+        historyP1: 'Installée sur la rive gauche du Douro à São João da Pesqueira, la Quinta de Ventozelo s’étend sur environ 400 hectares de vignes en restanques, d’oliveraies, de forêt méditerranéenne et de sentiers.',
+        historyP2: 'Les premières traces écrites remontent au Moyen Âge, liées aux moines cisterciens et à l’abbaye de São Pedro das Águias, avant de traverser les siècles au fil des générations.',
+        historyP3: 'Aujourd’hui, le domaine associe tradition viticole du Douro, accueil, gastronomie et préservation de la biodiversité face au fleuve.',
+        footerCopy: 'Quinta de Ventozelo · Douro, Portugal · Carta, Qual é o teu vinho & História'
+      }
+    };
+
+    const state = {
+      lang: 'pt',
+      activeTab: 'carta',
+      cartaFilter: 'all',
+      questions: [],
+      currentQuestionIndex: 0,
+      answers: [],
+      quizFinished: false
+    };
+
+    function generateFreshQuestions() {
+      const copy = [...QUESTION_POOL];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy.slice(0, 5).map((q) => {
+        const shuffledOptions = [...q.options];
+        for (let i = shuffledOptions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+        }
+        return {
+          ...q,
+          options: shuffledOptions
+        };
+      });
+    }
+
+    function resetQuiz(generateNew = true) {
+      if (generateNew || state.questions.length === 0) {
+        state.questions = generateFreshQuestions();
+      }
+      state.currentQuestionIndex = 0;
+      state.answers = [];
+      state.quizFinished = false;
+    }
+
+    function computeRecommendation() {
+      const tallies = {
+        style: {},
+        mouthfeel: {},
+        aroma: {},
+        foodKey: {}
+      };
+
+      state.answers.forEach((opt) => {
+        if (!opt || !opt.weights) return;
+        Object.entries(opt.weights).forEach(([dim, val]) => {
+          tallies[dim][val] = (tallies[dim][val] || 0) + 1;
+        });
+      });
+
+      const topDimensionVal = (dim) => {
+        const entries = Object.entries(tallies[dim]);
+        if (!entries.length) return null;
+        entries.sort((a, b) => b[1] - a[1]);
+        return entries[0][0];
+      };
+
+      const preferredStyle = topDimensionVal('style');
+      const preferredMouthfeel = topDimensionVal('mouthfeel');
+      const preferredAroma = topDimensionVal('aroma');
+      const preferredFoodKey = topDimensionVal('foodKey');
+
+      let bestWine = WINE_CATALOG[0];
+      let bestScore = -1;
+
+      WINE_CATALOG.forEach((wine) => {
+        let score = 0;
+        if (preferredStyle && wine.style === preferredStyle) score += 3;
+        if (preferredMouthfeel && wine.mouthfeel === preferredMouthfeel) score += 3;
+        if (preferredAroma && wine.aroma === preferredAroma) score += 2;
+        if (preferredFoodKey && wine.foodKey === preferredFoodKey) score += 2;
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestWine = wine;
+        }
+      });
+
+      const resolvedFoodKey = preferredFoodKey || bestWine.foodKey;
+      const pairing = PAIRINGS[resolvedFoodKey] || PAIRINGS[bestWine.foodKey];
+
+      return {
+        wine: bestWine,
+        pairing
+      };
+    }
+
+    function getStyleBadgeLabel(style, lang) {
+      const map = {
+        tinto: { pt: 'Tinto', en: 'Red', zh: '红葡萄酒', ja: '赤', es: 'Tinto', fr: 'Rouge' },
+        branco: { pt: 'Branco', en: 'White', zh: '白葡萄酒', ja: '白', es: 'Blanco', fr: 'Blanc' },
+        espumante: { pt: 'Espumante', en: 'Sparkling', zh: '起泡酒', ja: 'スパークリング', es: 'Espumoso', fr: 'Effervescent' },
+        doce_fortificado: { pt: 'Especial / Doce', en: 'Special / Sweet', zh: '特色 / 甜型', ja: '特別・甘口', es: 'Especial / Dulce', fr: 'Spécial / Doux' }
+      };
+      return (map[style] && map[style][lang]) || style;
+    }
+
+    function updateHeaderAndTabs() {
+      const t = UI_TEXT[state.lang];
+      document.documentElement.lang = state.lang === 'zh' ? 'zh-CN' : state.lang;
+      document.getElementById('heroSubtitle').textContent = t.heroSubtitle;
+      document.getElementById('label-tab-carta').textContent = t.tabCarta;
+      document.getElementById('label-tab-quiz').textContent = t.tabQuiz;
+      document.getElementById('label-tab-historia').textContent = t.tabHistoria;
+      document.getElementById('footerCopy').textContent = t.footerCopy;
+
+      const langSelect = document.getElementById('langSelect');
+      if (langSelect) {
+        langSelect.value = state.lang;
+      }
+
+      ['carta', 'quiz', 'historia'].forEach((tabName) => {
+        const tabBtn = document.getElementById(`tab-${tabName}`);
+        tabBtn.className = `hero-card-btn px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-semibold text-xs sm:text-sm md:text-base flex items-center justify-center text-center cursor-pointer ${
+          state.activeTab === tabName ? 'hero-card-active' : 'hero-card-inactive'
+        }`;
+      });
+    }
+
+    function renderCartaView() {
+      const t = UI_TEXT[state.lang];
+      const filters = [
+        { key: 'all', label: t.filterAll },
+        { key: 'tinto', label: t.filterTinto },
+        { key: 'branco', label: t.filterBranco },
+        { key: 'espumante', label: t.filterEspumante },
+        { key: 'doce_fortificado', label: t.filterDoce }
+      ];
+
+      const filteredWines =
+        state.cartaFilter === 'all'
+          ? WINE_CATALOG
+          : WINE_CATALOG.filter((w) => w.style === state.cartaFilter);
+
+      return `
+        <section class="view-animate space-y-6">
+          <div class="bg-parchment rounded-2xl p-6 border border-olive-700/20 shadow-md flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <span class="text-xs uppercase tracking-widest font-semibold text-wine-700">Quinta de Ventozelo</span>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold text-olive-900 mt-1">${t.cartaTitle}</h2>
+              <p class="text-depth text-sm text-[#3f4433] mt-1 max-w-2xl">${t.cartaSubtitle}</p>
+            </div>
+            <div class="text-xs font-semibold px-3.5 py-2 rounded-full bg-mustard-100 text-olive-900 border border-mustard-500/40 self-start md:self-auto">
+              ${filteredWines.length} / ${WINE_CATALOG.length}
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            ${filters
+              .map(
+                (f) => `
+              <button
+                data-filter="${f.key}"
+                class="carta-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition cursor-pointer ${
+                  state.cartaFilter === f.key
+                    ? 'bg-wine-800 text-white shadow-sm'
+                    : 'bg-parchment text-olive-900 border border-olive-700/25 hover:border-mustard-500'
+                }"
+              >
+                ${f.label}
+              </button>
+            `
+              )
+              .join('')}
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${filteredWines
+              .map(
+                (wine) => `
+              <article class="bg-parchment rounded-2xl p-5 border border-olive-700/20 hover:border-mustard-500/70 transition shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-olive-100 text-olive-800">
+                      ${getStyleBadgeLabel(wine.style, state.lang)}
+                    </span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-mustard-500"></span>
+                  </div>
+                  <h3 class="font-display text-2xl font-bold text-wine-900 leading-snug">
+                    ${wine.exactName}
+                  </h3>
+                  <p class="text-depth mt-2.5 text-sm text-[#323628] leading-relaxed">
+                    ${wine.desc[state.lang] || wine.desc.pt}
+                  </p>
+                </div>
+              </article>
+            `
+              )
+              .join('')}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderQuizView() {
+      const t = UI_TEXT[state.lang];
+
+      if (state.quizFinished) {
+        const { wine, pairing } = computeRecommendation();
+        return `
+          <section class="view-animate max-w-3xl mx-auto space-y-6">
+            <div class="bg-parchment rounded-3xl p-6 sm:p-8 border-2 border-mustard-500/60 shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-wine-100 text-wine-800">
+                  ${t.resultBadge}
+                </span>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-olive-100 text-olive-800">
+                  ${getStyleBadgeLabel(wine.style, state.lang)}
+                </span>
+              </div>
+
+              <h2 class="font-display text-3xl sm:text-5xl font-bold text-wine-900 mt-2">
+                ${wine.exactName}
+              </h2>
+
+              <p class="text-depth mt-3 text-sm sm:text-base text-[#313527] leading-relaxed">
+                ${wine.desc[state.lang] || wine.desc.pt}
+              </p>
+
+              <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-olive-100/80 border border-olive-700/20">
+                  <p class="text-xs font-bold uppercase tracking-wider text-olive-700">
+                    ${t.pairingLabel}
+                  </p>
+                  <p class="text-depth mt-1.5 text-sm font-semibold text-olive-900">
+                    ${pairing.dish[state.lang] || pairing.dish.pt}
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-mustard-100 border border-mustard-500/40">
+                  <p class="text-xs font-bold uppercase tracking-wider text-mustard-600">
+                    ${t.whyLabel}
+                  </p>
+                  <p class="text-depth mt-1.5 text-sm text-[#313527] leading-relaxed">
+                    ${pairing.reason[state.lang] || pairing.reason.pt}
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-7 flex flex-wrap gap-3">
+                <button
+                  id="btnNewQuizQuestions"
+                  class="px-5 py-2.5 rounded-xl bg-olive-700 hover:bg-olive-800 text-white text-sm font-semibold transition cursor-pointer shadow"
+                >
+                  ${t.newQuestionsBtn}
+                </button>
+                <button
+                  id="btnRestartSameQuiz"
+                  class="px-5 py-2.5 rounded-xl bg-mustard-500 hover:bg-mustard-600 text-olive-900 text-sm font-semibold transition cursor-pointer"
+                >
+                  ${t.restartQuizBtn}
+                </button>
+                <button
+                  id="btnGoToCarta"
+                  class="px-5 py-2.5 rounded-xl bg-white hover:bg-wine-100 text-wine-900 border border-wine-800/30 text-sm font-semibold transition cursor-pointer"
+                >
+                  ${t.viewInCartaBtn}
+                </button>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      const question = state.questions[state.currentQuestionIndex];
+      const stepNum = state.currentQuestionIndex + 1;
+      const progressPct = (stepNum / 5) * 100;
+
+      return `
+        <section class="view-animate max-w-3xl mx-auto space-y-5">
+          <div class="bg-parchment rounded-2xl p-6 border border-olive-700/20 shadow-md">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h2 class="font-display text-3xl sm:text-4xl font-bold text-olive-900">
+                ${t.quizTitle}
+              </h2>
+              <button
+                id="btnRegenerateMidQuiz"
+                class="text-xs font-semibold px-3.5 py-1.5 rounded-full bg-mustard-100 hover:bg-mustard-400/30 text-olive-900 border border-mustard-500/40 transition cursor-pointer"
+              >
+                ${t.newQuestionsBtn}
+              </button>
+            </div>
+            <p class="text-depth text-sm text-[#3f4433] mt-1.5">${t.quizSubtitle}</p>
+
+            <div class="mt-5">
+              <div class="flex items-center justify-between text-xs font-semibold text-olive-800 mb-1.5">
+                <span>${t.questionLabel} ${stepNum} ${t.ofLabel} 5</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-wine-100 text-wine-800">
+                  ${question.category[state.lang] || question.category.pt}
+                </span>
+              </div>
+              <div class="w-full h-2.5 bg-olive-100 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-olive-700 to-mustard-500 transition-all duration-300"
+                  style="width: ${progressPct}%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-parchment rounded-3xl p-6 sm:p-7 border border-olive-700/20 shadow-md">
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-wine-900">
+              ${question.prompt[state.lang] || question.prompt.pt}
+            </h3>
+
+            <div class="mt-5 space-y-3">
+              ${question.options
+                .map(
+                  (opt, idx) => `
+                <button
+                  data-option-index="${idx}"
+                  class="quiz-option-btn w-full text-left p-4 rounded-2xl border border-olive-700/25 bg-olive-100/55 hover:bg-mustard-100 hover:border-mustard-600 transition flex items-center justify-between gap-3 cursor-pointer group"
+                >
+                  <span class="text-depth text-sm sm:text-base font-medium text-[#1f2317]">
+                    ${opt.label[state.lang] || opt.label.pt}
+                  </span>
+                  <span class="w-7 h-7 rounded-full bg-white border border-olive-700/25 group-hover:bg-wine-800 group-hover:text-white group-hover:border-wine-800 flex items-center justify-center text-xs font-bold text-olive-800 shrink-0 transition">
+                    ${String.fromCharCode(65 + idx)}
+                  </span>
+                </button>
+              `
+                )
+                .join('')}
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderHistoriaView() {
+      const t = UI_TEXT[state.lang];
+      return `
+        <section class="view-animate max-w-4xl mx-auto space-y-6">
+          <div class="bg-parchment rounded-3xl overflow-hidden border border-olive-700/20 shadow-md">
+            <div class="h-56 sm:h-72 w-full overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1400&q=80"
+                alt="Quinta de Ventozelo vineyards in the Douro valley"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/1200x500/3f4a28/fbf9f4?text=Quinta+de+Ventozelo';"
+              />
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-semibold bg-olive-900/80 text-mustard-100 backdrop-blur-sm">
+                São João da Pesqueira · Douro, Portugal
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-4">
+              <span class="text-xs uppercase tracking-widest font-bold text-mustard-600">
+                ${t.tabHistoria}
+              </span>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold text-olive-900">
+                ${t.historiaTitle}
+              </h2>
+              <p class="text-depth text-sm sm:text-base font-medium text-wine-800">
+                ${t.historiaSubtitle}
+              </p>
+
+              <div class="text-depth pt-2 space-y-4 text-sm sm:text-base text-[#313527] leading-relaxed">
+                <p>${t.historyP1}</p>
+                <p>${t.historyP2}</p>
+                <p>${t.historyP3}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function render() {
+      try {
+        updateHeaderAndTabs();
+        const container = document.getElementById('appContainer');
+
+        if (state.activeTab === 'carta') {
+          container.innerHTML = renderCartaView();
+          container.querySelectorAll('.carta-filter-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              state.cartaFilter = btn.dataset.filter;
+              render();
+            });
+          });
+        } else if (state.activeTab === 'quiz') {
+          container.innerHTML = renderQuizView();
+          container.querySelectorAll('.quiz-option-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const idx = Number(btn.dataset.optionIndex);
+              const currentQ = state.questions[state.currentQuestionIndex];
+              state.answers.push(currentQ.options[idx]);
+
+              if (state.currentQuestionIndex < state.questions.length - 1) {
+                state.currentQuestionIndex += 1;
+              } else {
+                state.quizFinished = true;
+              }
+              render();
+            });
+          });
+
+          const regenBtn = document.getElementById('btnRegenerateMidQuiz');
+          if (regenBtn) {
+            regenBtn.addEventListener('click', () => {
+              resetQuiz(true);
+              render();
+            });
+          }
+
+          const newQuizBtn = document.getElementById('btnNewQuizQuestions');
+          if (newQuizBtn) {
+            newQuizBtn.addEventListener('click', () => {
+              resetQuiz(true);
+              render();
+            });
+          }
+
+          const restartBtn = document.getElementById('btnRestartSameQuiz');
+          if (restartBtn) {
+            restartBtn.addEventListener('click', () => {
+              resetQuiz(false);
+              render();
+            });
+          }
+
+          const goCartaBtn = document.getElementById('btnGoToCarta');
+          if (goCartaBtn) {
+            goCartaBtn.addEventListener('click', () => {
+              state.activeTab = 'carta';
+              render();
+            });
+          }
+        } else if (state.activeTab === 'historia') {
+          container.innerHTML = renderHistoriaView();
+        }
+      } catch (err) {
+        console.error('Render error:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      resetQuiz(true);
+
+      const langSelect = document.getElementById('langSelect');
+      if (langSelect) {
+        langSelect.addEventListener('change', (e) => {
+          state.lang = e.target.value;
+          render();
+        });
+      }
+
+      ['carta', 'quiz', 'historia'].forEach((tab) => {
+        document.getElementById(`tab-${tab}`).addEventListener('click', () => {
+          state.activeTab = tab;
+          if (tab === 'quiz' && state.questions.length === 0) {
+            resetQuiz(true);
+          }
+          render();
+        });
+      });
+
+      render();
+    });
+  </script>
+</body>
+</html>
+
